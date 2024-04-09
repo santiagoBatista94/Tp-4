@@ -35,14 +35,22 @@ public class Calculadora extends javax.swing.JFrame {
         jtGradosF = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
+        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("CONVERTIDOR DE GRADOS");
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("INGRESE LA TEMPERATURA EN °C:");
 
+        jtGradosC.setBackground(new java.awt.Color(255, 255, 204));
+        jtGradosC.setForeground(new java.awt.Color(51, 51, 51));
+
+        jbConvertir.setBackground(new java.awt.Color(51, 51, 51));
+        jbConvertir.setForeground(new java.awt.Color(255, 255, 0));
         jbConvertir.setText("CONVERTIR A °F");
         jbConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,9 +58,12 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("TEMPERATURA EN °F:");
 
-        jtGradosF.setEditable(false);
+        jtGradosF.setBackground(new java.awt.Color(255, 255, 204));
+        jtGradosF.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jtGradosF.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,7 +104,7 @@ public class Calculadora extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jtGradosF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtGradosF, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(212, 212, 212))
         );
 
