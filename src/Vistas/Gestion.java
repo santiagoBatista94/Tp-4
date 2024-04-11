@@ -9,6 +9,7 @@ public class Gestion extends javax.swing.JInternalFrame {
 
     public Gestion() {
         initComponents();
+        
     }
 
  
