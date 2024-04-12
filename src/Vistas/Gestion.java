@@ -267,7 +267,7 @@ dispose();      // TODO add your handling code here:
     }//GEN-LAST:event_jbEliminarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
- int codigo;
+        int codigo;
         String descripcion;
         double precio;
         Rubro rubro;
@@ -309,10 +309,9 @@ dispose();      // TODO add your handling code here:
             return;
         }
          
-         
-       rubro = (Rubro)jcRubros.getSelectedItem();
-      
-       Producto nvoProd=new Producto();
+        rubro =(Rubro) jcRubros.getSelectedItem();
+  
+        Producto nvoProd=new Producto(codigo,descripcion,precio,rubro, stock);
        if(productos.add(nvoProd)){
            JOptionPane.showMessageDialog(this, "Producto Agregado");
            limpiar();

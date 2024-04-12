@@ -13,11 +13,15 @@ public class Producto {
     private int codigo;
     private String descripcion;
     private int stock;
-    private int precio;
+    private double precio;
     private Rubro categoria;
 
     public Producto() {
         
+    }
+
+    public Producto(int codigo, String descripcion, double precio, Rubro rubro, int stock) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getCodigo() {
@@ -44,7 +48,7 @@ public class Producto {
         this.stock = stock;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 

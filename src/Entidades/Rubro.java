@@ -10,7 +10,7 @@ package Entidades;
  * @author CCMEW
  */
 public class Rubro {
-     private int id;
+    private int id;
     private String nombre;
 
     public Rubro(int id, String nombre) {
