@@ -5,10 +5,13 @@
  */
 package Vistas;
 
+import Entidades.Producto;
+import Entidades.Rubro;
 import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+
 
 public class Gestion extends javax.swing.JInternalFrame {
  private TreeSet<Producto> productos;
@@ -223,6 +226,7 @@ dispose();      // TODO add your handling code here:
 
     private void JbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbBuscarActionPerformed
         int codigo;
+       
         if(validaEntero(jtCodigo.getText())){
             codigo = Integer.parseInt(jtCodigo.getText());
         }else {
@@ -239,7 +243,7 @@ dispose();      // TODO add your handling code here:
                 jtDescripcion.setText(prod.getDescripcion());
                 jtPrecio.setText(prod.getPrecio()+"");
                 jtStock.setText(prod.getStock()+"");
-                jcRubros.setSelectedItem(prod.getRubro());
+                jcRubros.setSelectedItem(prod.getCategoria());
                 jbEliminar.setEnabled(true);
                 auxiliar=prod;
                 return;
@@ -253,7 +257,13 @@ dispose();      // TODO add your handling code here:
     }//GEN-LAST:event_JbBuscarActionPerformed
 
     private void jbEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEliminarActionPerformed
-       
+        int opcion=JOptionPane.showConfirmDialog(this, "Confirma Eliminación S/N", "Confirmación",JOptionPane.YES_NO_OPTION);
+                if(opcion==JOptionPane.YES_OPTION){
+                     productos.remove(auxiliar);
+                    JOptionPane.showMessageDialog(this, "Producto Eliminado ");
+                    limpiar();
+                    auxiliar=null;
+                }
     }//GEN-LAST:event_jbEliminarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
@@ -302,7 +312,7 @@ dispose();      // TODO add your handling code here:
          
        rubro = (Rubro)jcRubros.getSelectedItem();
       
-       Producto nvoProd=new Producto(codigo,descripcion,precio,rubro,stock);
+       Producto nvoProd=new Producto();
        if(productos.add(nvoProd)){
            JOptionPane.showMessageDialog(this, "Producto Agregado");
            limpiar();
@@ -315,7 +325,7 @@ dispose();      // TODO add your handling code here:
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jbNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNuevoActionPerformed
- limpiar();        // TODO add your handling code here:
+     limpiar();        // TODO add your handling code here:
     }//GEN-LAST:event_jbNuevoActionPerformed
 
   private boolean validaEntero(String nro){

@@ -14,15 +14,63 @@ public class Producto {
     private String descripcion;
     private int stock;
     private int precio;
-    private String categoria;
+    private Rubro categoria;
 
-    public Producto(int codigo, String descripcion, int stock, int precio, String categoria) {
+    public Producto() {
+        
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public Rubro getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Rubro categoria) {
+        this.categoria = categoria;
+    }
+
+   
+
+
+    public Producto(int codigo, String descripcion, int stock, int precio, Rubro categoria) {
         this.codigo = codigo;
         this.descripcion = descripcion;
         this.stock = stock;
         this.precio = precio;
         this.categoria = categoria;
     }
-    
-    
-}
+
+   
+    }
+
