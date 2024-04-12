@@ -68,9 +68,19 @@ public class General extends javax.swing.JFrame {
         jMenu2.setText("Consulta");
 
         jMenuItem2.setText("Por Rubro");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuItem3.setText("Por Nombre");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Por Precio");
@@ -123,17 +133,30 @@ Gestion producto=new Gestion();
  ListaPrecio lista=new ListaPrecio();
         escritorio.removeAll();
         escritorio.repaint();
-      escritorio.add(lista);
+        escritorio.add(lista);
         lista.toFront();
-     
-       
-//        escritorio.moveToFront(lista);
-           lista.setVisible(true);        // TODO add your handling code here:
+        lista.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+       PorRubro lista=new PorRubro();
+        escritorio.removeAll();
+        escritorio.repaint();
+        escritorio.add(lista);
+        lista.toFront();
+        lista.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        PorNombre lista=new PorNombre();
+        escritorio.removeAll();
+        escritorio.repaint();
+        escritorio.add(lista);
+        lista.toFront();
+        lista.setVisible(true);         
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
