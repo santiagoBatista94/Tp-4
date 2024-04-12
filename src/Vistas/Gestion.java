@@ -311,6 +311,7 @@ dispose();      // TODO add your handling code here:
          
         rubro =(Rubro) jcRubros.getSelectedItem();
   
+// aca tira el error 
         Producto nvoProd=new Producto(codigo,descripcion,precio,rubro, stock);
        if(productos.add(nvoProd)){
            JOptionPane.showMessageDialog(this, "Producto Agregado");
