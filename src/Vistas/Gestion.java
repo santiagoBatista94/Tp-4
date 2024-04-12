@@ -11,7 +11,7 @@ public class Gestion extends javax.swing.JInternalFrame {
         initComponents();
         
     }
-
+// trabajo practico n6
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
