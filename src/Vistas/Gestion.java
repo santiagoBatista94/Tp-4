@@ -308,9 +308,9 @@ dispose();      // TODO add your handling code here:
             jtDescripcion.requestFocus();
             return;
         }
-         
+        //  
         rubro =(Rubro) jcRubros.getSelectedItem();
-  
+
 // aca tira el error 
         Producto nvoProd=new Producto(codigo,descripcion,precio,rubro, stock);
        if(productos.add(nvoProd)){
